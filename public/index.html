@@ -88,12 +88,12 @@
             >
                 <div class="col-sm-4">
                     <div class="p-3 border bg-light">
-                        justify-content-center
+                        <h1>justify-content-center</h1>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="p-3 border bg-light">
-                        justify-content-center
+                        <h1>justify-content-center</h1>
                     </div>
                 </div>
             </div>
@@ -102,12 +102,12 @@
             >
                 <div class="col-sm-4">
                     <div class="p-3 border bg-light">
-                        justify-content-around
+                        <h2>justify-content-around</h2>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="p-3 border bg-light">
-                        justify-content-around
+                        <h2>justify-content-around</h2>
                     </div>
                 </div>
             </div>
@@ -116,42 +116,48 @@
             >
                 <div class="col-sm-4">
                     <div class="p-3 border bg-light">
-                        justify-content-between
+                        <h3>justify-content-between</h3>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="p-3 border bg-light">
-                        justify-content-between
+                        <h3>justify-content-between</h3>
                     </div>
                 </div>
             </div>
             <div
-                class="row custom-row-3 justify-content-evenly align-items-evenly"
+                class="row custom-row-4 justify-content-evenly align-items-evenly"
             >
                 <div class="col-sm-4">
                     <div class="p-3 border bg-light">
-                        justify-content-evenly
+                        <h4>justify-content-evenly</h4>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="p-3 border bg-light">
-                        justify-content-evenly
+                        <h4>justify-content-evenly</h4>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-evenly align-items-evenly">
                 <div class="col">
-                    <button type="button" class="btn btn-warning">
-                        Warning
-                    </button>
+                    <div class="p-3 border bg-light">
+                        <button type="button" class="btn btn-warning">
+                            Warning
+                        </button>
+                    </div>
                 </div>
                 <div class="col">
-                    <button type="button" class="btn btn-success">
-                        Warning
-                    </button>
+                    <div class="p-3 border bg-light">
+                        <button type="button" class="btn btn-success">
+                            Success
+                        </button>
+                    </div>
                 </div>
                 <div class="col">
-                    <button type="button" class="btn btn-info">Warning</button>
+                    <div class="p-3 border bg-light">
+                        <button type="button" class="btn btn-info">Info</button>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -186,6 +192,75 @@
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row justify-content-evenly">
+                <div class="col-6 border">
+                    <fieldset class="form-group">
+                        <legend class="mt-4">Checkboxes</legend>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckDefault"
+                            />
+                            <label
+                                class="form-check-label"
+                                for="flexCheckDefault"
+                            >
+                                Default checkbox
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked=""
+                            />
+                            <label
+                                class="form-check-label"
+                                for="flexCheckChecked"
+                            >
+                                Checked checkbox
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-6 border">
+                    <fieldset class="form-group">
+                        <legend class="mt-4">Ranges</legend>
+                        <label for="customRange1" class="form-label"
+                            >Example range</label
+                        >
+                        <input
+                            type="range"
+                            class="form-range"
+                            id="customRange1"
+                        />
+                        <label for="disabledRange" class="form-label"
+                            >Disabled range</label
+                        >
+                        <input
+                            type="range"
+                            class="form-range"
+                            id="disabledRange"
+                            disabled=""
+                        />
+                        <label for="customRange3" class="form-label"
+                            >Example range</label
+                        >
+                        <input
+                            type="range"
+                            class="form-range"
+                            min="0"
+                            max="5"
+                            step="0.5"
+                            id="customRange3"
+                        />
+                    </fieldset>
                 </div>
             </div>
         </div>
