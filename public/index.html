@@ -9,45 +9,134 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarColor03"
+                    aria-controls="navbarColor03"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor03">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"
+                                >Home
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                                href="#"
+                                role="button"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                >Dropdown</a
+                            >
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#"
+                                    >Another action</a
+                                >
+                                <a class="dropdown-item" href="#"
+                                    >Something else here</a
+                                >
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"
+                                    >Separated link</a
+                                >
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input
+                            class="form-control me-sm-2"
+                            type="text"
+                            placeholder="Search"
+                        />
+                        <button
+                            class="btn btn-secondary my-2 my-sm-0"
+                            type="submit"
+                        >
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
         <div class="container my-main">
             <div
                 class="row custom-row-1 justify-content-center align-items-center gx-5"
             >
                 <div class="col-sm-4">
-                    <div class="p-3 border bg-light">Col One</div>
+                    <div class="p-3 border bg-light">
+                        justify-content-center
+                    </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="p-3 border bg-light">Col Two</div>
+                    <div class="p-3 border bg-light">
+                        justify-content-center
+                    </div>
                 </div>
             </div>
             <div
                 class="row custom-row-2 justify-content-around align-items-around"
             >
                 <div class="col-sm-4">
-                    <div class="p-3 border bg-light">Col One</div>
+                    <div class="p-3 border bg-light">
+                        justify-content-around
+                    </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="p-3 border bg-light">Col Two</div>
+                    <div class="p-3 border bg-light">
+                        justify-content-around
+                    </div>
                 </div>
             </div>
             <div
                 class="row custom-row-3 justify-content-between align-items-between"
             >
                 <div class="col-sm-4">
-                    <div class="p-3 border bg-light">Col One</div>
+                    <div class="p-3 border bg-light">
+                        justify-content-between
+                    </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="p-3 border bg-light">Col Two</div>
+                    <div class="p-3 border bg-light">
+                        justify-content-between
+                    </div>
                 </div>
             </div>
             <div
                 class="row custom-row-3 justify-content-evenly align-items-evenly"
             >
                 <div class="col-sm-4">
-                    <div class="p-3 border bg-light">Col One</div>
+                    <div class="p-3 border bg-light">
+                        justify-content-evenly
+                    </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="p-3 border bg-light">Col Two</div>
+                    <div class="p-3 border bg-light">
+                        justify-content-evenly
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -63,6 +152,40 @@
                 </div>
                 <div class="col">
                     <button type="button" class="btn btn-info">Warning</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div
+                        class="card bg-secondary mb-3"
+                        style="max-width: 20rem"
+                    >
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h4 class="card-title">Secondary card title</h4>
+                            <p class="card-text">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div
+                        class="card bg-secondary mb-3"
+                        style="max-width: 20rem"
+                    >
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h4 class="card-title">Secondary card title</h4>
+                            <p class="card-text">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
