@@ -11,7 +11,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Pain Buddy</a>
+                <a class="navbar-brand px-5 py-3" href="#">Pain Buddy</a>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -26,14 +26,11 @@
 
                 <div class="collapse navbar-collapse" id="navbarColor03">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#"
-                                >Create New Pain Log
-                                <span class="visually-hidden">(current)</span>
-                            </a>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="#">Home </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">View All Pain Logs</a>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="#">Your Logs</a>
                         </li>
                     </ul>
                 </div>
@@ -45,7 +42,7 @@
             >
                 <div class="col"></div>
                 <div class="col-sm-12 col-md-6">
-                    <div class="p-3 border bg-light">
+                    <div class="p-4 border bg-light">
                         <h1>Let's record your pain levels from yesterday</h1>
                     </div>
                 </div>
@@ -58,7 +55,7 @@
                 <div class="col-sm-12 col-md-6">
                     <div class="p-3 border bg-light">
                         <form action="">
-                            <div class="form-date-group px-5">
+                            <div class="form-date-group px-5 my-4">
                                 <legend class="mt-4">
                                     What was yesterday's date?
                                 </legend>
@@ -70,7 +67,7 @@
                                 />
                             </div>
 
-                            <fieldset class="form-severity-group">
+                            <fieldset class="form-severity-group my-4">
                                 <legend class="mt-4">
                                     How was your pain severity?
                                 </legend>
@@ -79,8 +76,8 @@
                                         <input
                                             type="radio"
                                             class="form-check-input"
-                                            id="none!-input"
-                                            value="none!"
+                                            id="none-input"
+                                            value="none"
                                         />
                                         none
                                     </label>
@@ -130,7 +127,18 @@
                                     </label>
                                 </div>
                             </fieldset>
-                            <button type="submit" class="btn btn-primary">
+                            <div class="form-date-group px-5 m-4">
+                                <legend class="mt-4">
+                                    Where was the pain located on your body?
+                                </legend>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Head, neck, and shoulders"
+                                    id="inputDefault"
+                                />
+                            </div>
+                            <button type="submit" class="btn btn-primary m-4">
                                 Submit
                             </button>
                         </form>
