@@ -16,13 +16,13 @@ module.exports = {
     createNewLog: (req, res) => {
         console.log(req.body)
         console.log(req.params)
-        const { severity, location, duration } = req.body
+        const { date, severity, location, duration } = req.body
 
         sequelize
             .query(
                 `
-                INSERT INTO logs (severity, location, duration)
-                VALUES ('${severity}', '${location}', '${duration}')
+                INSERT INTO logs (date, severity, location, duration)
+                VALUES (${date}, '${severity}', '${location}', '${duration}')
             `
             )
             .then((dbRes) => res.status(200).send(dbRes[0]))
