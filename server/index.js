@@ -1,11 +1,15 @@
+require('dotenv').config()
 const express = require('express')
-const cors = require('cors')
-const path = require('path')
-
 const app = express()
+const cors = require('cors')
+const { SERVER_PORT } = process.env
+const { addNewLog, getPastLogs } = require('./controller')
+
+const path = require('path')
 
 app.use(express.json())
 app.use(cors())
+
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
