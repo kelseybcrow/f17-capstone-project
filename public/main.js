@@ -13,7 +13,7 @@ const durationInput = document.querySelector('#duration-input')
 function handleSubmit(event) {
     event.preventDefault()
 
-    if (!severityInput || !locationInput || !durationInput) {
+    if (!dateInput || !severityInput || !locationInput || !durationInput) {
         alert('Please fill out all fields')
         return
     }
@@ -28,6 +28,7 @@ function handleSubmit(event) {
     axios
         .post(`${SERVER_PORT}/logs`, body)
         .then(() => {
+            dateInput.value = ''
             severityInput.value = ''
             locationInput.value = ''
             durationInput.value = ''
@@ -37,16 +38,28 @@ function handleSubmit(event) {
 }
 
 function getPastLogs() {
-    axios.get(`${SERVER_PORT}/logs`).then((res) => {
-        res.data.forEach((log) => {
-            let logCard = `
-                <div class="card bg-light mb-3">
-                    <div class="card-header">Header</div>
-  <div class="card-body">
-    <h4 class="card-title">Light card title</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>                `
-        })
+    logList.innerHTML = '
+    '
+    axios.get(`${SERVER_PORT}/logs`)
+        .then((res) => {
+            res.data.forEach((log) => {
+                let logCard = `
+                    <div class="card bg-light mb-3">
+                        <div class="card-header">Pain log from ${dateInput}</div>
+                        <div class="card-body">
+                            <h4 class="card-title">Severity</h4>
+                            <p class="card-text">${severityInput}</p>
+                            <h4 class="card-title">Location</h4>
+                            <p class="card-text">${locationInput}</p>
+                            <h4 class="card-title">Duration</h4>
+                            <p class="card-text">${durationInput}</p>
+                        </div>
+                    </div>
+                    `
+                logList.innerHTML += logCard
+            })
     })
 }
+
+getPastLogs()
+form.addEventListener('submit', handleSubmit)
