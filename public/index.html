@@ -38,22 +38,20 @@
         </nav>
         <div class="container my-main min-vh-100 min-vw-100 text-center">
             <div
-                class="row title-row justify-content-center align-items-center mt-5"
+                class="row title-row justify-content-center align-items-center"
             >
-                <div class="col"></div>
-                <div class="col-sm-12 col-md-6">
-                    <div class="p-4 border bg-light">
+                <div class="col-sm-12 col-md-5 mt-5">
+                    <div class="p-4 border bg-light opacity-75">
                         <h1>Let's record your pain levels from yesterday</h1>
                     </div>
                 </div>
-                <div class="col"></div>
             </div>
             <div
                 class="row pain-log-form justify-content-around align-items-around"
             >
                 <div class="col"></div>
-                <div class="col-sm-12 col-md-6">
-                    <div class="p-3 border bg-light">
+                <div class="col-sm-12 col-md-5">
+                    <div class="p-3 border bg-light opacity-75">
                         <form action="">
                             <div class="form-date-group px-5 my-4">
                                 <legend class="mt-4">
@@ -138,6 +136,55 @@
                                     id="inputDefault"
                                 />
                             </div>
+                            <fieldset class="form-severity-group my-4">
+                                <legend class="mt-4">
+                                    How long did your pain last?
+                                </legend>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            id="hour-input"
+                                            value="hour"
+                                        />
+                                        less than an hour
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            id="mild-input"
+                                            value="mild"
+                                        />
+                                        mild
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            id="moderate-input"
+                                            value="moderate"
+                                        />
+                                        moderate
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            id="severe-input"
+                                            value="severe"
+                                        />
+                                        severe
+                                    </label>
+                                </div>
+                            </fieldset>
                             <button type="submit" class="btn btn-primary m-4">
                                 Submit
                             </button>
