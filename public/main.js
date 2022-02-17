@@ -1,8 +1,5 @@
-const { default: axios } = require('axios')
-const { getPastLogs } = require('../server/controller')
-const { SERVER_PORT } = process.env
+const { port } = require('./index')
 
-console.log('hello world')
 
 const form = document.querySelector('form')
 const dateInput = document.querySelector('#date-input')
@@ -26,21 +23,21 @@ function handleSubmit(event) {
     }
 
     axios
-        .post(`${SERVER_PORT}/logs`, body)
+        .post(`${port}/pain-logs`, body)
         .then(() => {
             dateInput.value = ''
             severityInput.value = ''
             locationInput.value = ''
             durationInput.value = ''
-            getPastLogs()
+            getPainLogs()
         })
         .catch((err) => console.log(err))
 }
 
-function getPastLogs() {
+function getPainLogs() {
     logList.innerHTML = '
     '
-    axios.get(`${SERVER_PORT}/logs`)
+    axios.get(`${port}/pain-logs`)
         .then((res) => {
             res.data.forEach((log) => {
                 let logCard = `
@@ -61,5 +58,5 @@ function getPastLogs() {
     })
 }
 
-getPastLogs()
+getPainLogs()
 form.addEventListener('submit', handleSubmit)

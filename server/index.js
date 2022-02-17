@@ -2,9 +2,9 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const { SERVER_PORT } = process.env
-const { createNewLog, getPastLogs } = require('./controller')
+const { createNewPainLog, getPainLogs } = require('./controller')
 
+const port = process.env.PORT || 4000
 const path = require('path')
 
 app.use(express.json())
@@ -16,13 +16,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
-// CREATE NEW LOG
+// CREATE NEW PAIN LOG
 
-app.post('/logs', createNewLog)
+app.post('/pain-logs', createNewPainLog)
 
-// GET PAST LOGS
-app.get('/logs', getPastLogs)
-
-const port = process.env.PORT || 4000
+// GET PAIN LOGS
+app.get('/pain-logs', getPainLogs)
 
 app.listen(port, () => console.log(`server running on ${port}`))
