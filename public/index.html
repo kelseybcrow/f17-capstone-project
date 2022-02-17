@@ -46,10 +46,7 @@
                 <div class="col"></div>
                 <div class="col-sm-12 col-md-6">
                     <div class="p-3 border bg-light">
-                        <h1>
-                            Hi there, let's review your pain levels from
-                            yesterday.
-                        </h1>
+                        <h1>Creating new pain log</h1>
                     </div>
                 </div>
                 <div class="col"></div>
@@ -61,149 +58,52 @@
                 <div class="col-sm-12 col-md-6">
                     <div class="p-3 border bg-light">
                         <form action="">
-                            <fieldset class="form-severity-group">
+                            <fieldset class="severity-group">
                                 <legend class="mt-4">
-                                    Which pain triggers were involved? (select
-                                    all that apply)
+                                    How was your pain severity?
                                 </legend>
-                                <div class="check form-check-inline">
-                                    <input
-                                        class="check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="flexCheckDefault"
-                                    />
-                                    <label
-                                        class="check-label"
-                                        for="flexCheckDefault"
-                                    >
-                                        Sitting without enough support
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            id="mild-input"
+                                            value="mild"
+                                        />
+                                        mild
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="flexCheckDefault"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="flexCheckDefault"
-                                    >
-                                        Overexertion
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            id="moderate-input"
+                                            value="moderate"
+                                        />
+                                        moderate
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="flexCheckDefault"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="flexCheckDefault"
-                                    >
-                                        Sore from exercise
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            id="severe-input"
+                                            value="severe"
+                                        />
+                                        severe
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="flexCheckDefault"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="flexCheckDefault"
-                                    >
-                                        Feeling stressed
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="flexCheckDefault"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="flexCheckDefault"
-                                    >
-                                        Poor sleep
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="flexCheckDefault"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="flexCheckDefault"
-                                    >
-                                        Weather
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="flexCheckDefault"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="flexCheckDefault"
-                                    >
-                                        Uncomfortable clothing
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="flexCheckDefault"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="flexCheckDefault"
-                                    >
-                                        Feeling sad or anxious
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="flexCheckDefault"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="flexCheckDefault"
-                                    >
-                                        Getting too cold
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="flexCheckDefault"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="flexCheckDefault"
-                                    >
-                                        Getting too hot
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            id="worst-ever-input"
+                                            value="worst-ever"
+                                        />
+                                        worst ever
                                     </label>
                                 </div>
                             </fieldset>
