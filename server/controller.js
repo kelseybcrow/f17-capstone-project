@@ -39,7 +39,7 @@ module.exports = {
                 CREATE TABLE "public.pain_logs" (
                     "log_id" serial NOT NULL,
                     "user_id" integer NOT NULL,
-                    "date" DATE NOT NULL,
+                    "date" varchar(255) NOT NULL,
                     "severity" integer NOT NULL,
                     "location" varchar(255) NOT NULL,
                     "duration" varchar(255) NOT NULL,
@@ -65,7 +65,7 @@ module.exports = {
             .query(
                 `
                 INSERT INTO pain_logs (date, severity, location, duration)
-                VALUES (${date}, '${severity}', '${location}', '${duration}')
+                VALUES ('${date}', '${severity}', '${location}', '${duration}')
             `
             )
             .then((dbRes) => res.status(200).send(dbRes[0]))

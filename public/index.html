@@ -46,7 +46,7 @@
                 <div class="col"></div>
                 <div class="col-sm-12 col-md-6">
                     <div class="p-3 border bg-light">
-                        <h1>Creating new pain log</h1>
+                        <h1>Let's record your pain levels from yesterday</h1>
                     </div>
                 </div>
                 <div class="col"></div>
@@ -58,10 +58,33 @@
                 <div class="col-sm-12 col-md-6">
                     <div class="p-3 border bg-light">
                         <form action="">
-                            <fieldset class="severity-group">
+                            <div class="form-date-group px-5">
+                                <legend class="mt-4">
+                                    What was yesterday's date?
+                                </legend>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Feb 10, 2022"
+                                    id="inputDefault"
+                                />
+                            </div>
+
+                            <fieldset class="form-severity-group">
                                 <legend class="mt-4">
                                     How was your pain severity?
                                 </legend>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            id="none!-input"
+                                            value="none!"
+                                        />
+                                        none
+                                    </label>
+                                </div>
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label">
                                         <input
