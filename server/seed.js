@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize';
-const { CONNECTION_STRING } = process.env;
+const Sequelize = require('sequelize')
+const { CONNECTION_STRING } = process.env
 
 const sequelize = new Sequelize(CONNECTION_STRING, {
     dialect: 'postgres',
@@ -8,7 +8,7 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
             rejectUnauthorized: false,
         },
     },
-});
+})
 
 module.exports = {
     seed: (req, res) => {
@@ -52,10 +52,9 @@ module.exports = {
                 `
             )
             .then(() => {
-                console.log('DB seeded!');
-                res.sendStatus(200);
+                console.log('DB seeded!')
+                res.sendStatus(200)
             })
-            .catch((err) => console.log('error seeding DB', err));
+            .catch((err) => console.log('error seeding DB', err))
     },
-};
-
+}

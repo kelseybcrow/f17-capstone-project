@@ -1,5 +1,3 @@
-const { port } = require('./index')
-
 const { baseUrl } = 'http://localhost:4000/pain-logs'
 
 const form = document.querySelector('form')
@@ -43,7 +41,7 @@ function handleSubmit(event) {
     }
 
     axios
-        .post(`${baseUrl}/pain-logs`, body)
+        .post(`${baseUrl}`, body)
         .then(() => {
             // resetFormValues()
             // getPainLogs()

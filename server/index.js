@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const { SERVER_PORT } = process.env
-const { seed } = require('./seed')
+// const { seed } = require('./seed')
 const { createNewPainLog, getPainLogs } = require('./controller')
 
 // const port = process.env.PORT || 4000
@@ -18,12 +18,12 @@ app.use(cors())
 // })
 
 // DEV
-app.post('/seed', seed)
+// app.post('/seed', seed)
 
 // CREATE NEW PAIN LOG
 app.post('/pain-logs', createNewPainLog)
 
 // GET ALL PAIN LOGS
-app.get('/pain-logs', getPainLogs)
+// app.get('/pain-logs', getPainLogs)
 
 app.listen(SERVER_PORT, () => console.log(`server running on ${SERVER_PORT}`))
