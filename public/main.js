@@ -1,34 +1,52 @@
 const { port } = require('./index')
 
+const { baseUrl } = 'http://localhost:4000/pain-logs'
+
 const form = document.querySelector('form')
+const submit = document.querySelector('#submit-button')
+// DATE INPUT
 const dateInput = document.querySelector('#date-input')
-const severityInput = document.querySelector('#severity-input')
+
+// SEVERITY INPUT
+let severityInput = document.querySelector(
+    'input[name="severity"]:checked'
+).value
+
+// LOCATION INPUT
 const locationInput = document.querySelector('#location-input')
-const durationInput = document.querySelector('#duration-input')
+
+// DURATION INPUT
+let durationInput = document.querySelector(
+    'input[name="duration"]:checked'
+).value
+
+// function resetFormValues() {
+//     // resetting date
+//     // resetting severity
+//     // resetting location
+//     // resetting duration
+// }
 
 function handleSubmit(event) {
     event.preventDefault()
 
-    if (!dateInput || !severityInput || !locationInput || !durationInput) {
-        alert('Please fill out all fields')
-        return
-    }
+    // if (!dateInput || !severityInput || !locationInput || !durationInput) {
+    //     alert('Please fill out all fields')
+    //     return
+    // }
 
     let body = {
         date: dateInput.value,
-        severity: severityInput.value,
+        severity: severityInput,
         location: locationInput.value,
-        duration: durationInput.value,
+        duration: durationInput,
     }
 
     axios
-        .post(`${port}/pain-logs`, body)
+        .post(`${baseUrl}/pain-logs`, body)
         .then(() => {
-            dateInput.value = ''
-            severityInput.value = ''
-            locationInput.value = ''
-            durationInput.value = ''
-            getPainLogs()
+            // resetFormValues()
+            // getPainLogs()
         })
         .catch((err) => console.log(err))
 }

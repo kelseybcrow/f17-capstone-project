@@ -75,7 +75,7 @@
                                         type="text"
                                         class="form-control"
                                         placeholder="Feb 10, 2022"
-                                        id="inputDefault"
+                                        id="date-input"
                                     />
                                 </div>
 
@@ -88,19 +88,9 @@
                                             <input
                                                 type="radio"
                                                 class="form-check-input"
-                                                id="none-input"
-                                                value="none"
-                                            />
-                                            none
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                            <input
-                                                type="radio"
-                                                class="form-check-input"
-                                                id="mild-input"
+                                                id="mild-pain-input"
                                                 value="mild"
+                                                name="severity"
                                             />
                                             mild
                                         </label>
@@ -110,8 +100,9 @@
                                             <input
                                                 type="radio"
                                                 class="form-check-input"
-                                                id="moderate-input"
+                                                id="moderate-pain-input"
                                                 value="moderate"
+                                                name="severity"
                                             />
                                             moderate
                                         </label>
@@ -121,8 +112,9 @@
                                             <input
                                                 type="radio"
                                                 class="form-check-input"
-                                                id="severe-input"
+                                                id="severe-pain-input"
                                                 value="severe"
+                                                name="severity"
                                             />
                                             severe
                                         </label>
@@ -132,8 +124,9 @@
                                             <input
                                                 type="radio"
                                                 class="form-check-input"
-                                                id="worst-ever-input"
+                                                id="worst-pain-input"
                                                 value="worst-ever"
+                                                name="severity"
                                             />
                                             worst ever
                                         </label>
@@ -150,7 +143,7 @@
                                         type="text"
                                         class="form-control"
                                         placeholder="Head, neck, and shoulders"
-                                        id="inputDefault"
+                                        id="location-input"
                                     />
                                 </div>
                                 <fieldset class="form-severity-group my-5">
@@ -164,6 +157,7 @@
                                                 class="form-check-input"
                                                 id="hour-input"
                                                 value="hour"
+                                                name="duration"
                                             />
                                             less than an hour
                                         </label>
@@ -175,6 +169,7 @@
                                                 class="form-check-input"
                                                 id="couple-hours-input"
                                                 value="couple-hours"
+                                                name="duration"
                                             />
                                             a couple hours
                                         </label>
@@ -184,8 +179,9 @@
                                             <input
                                                 type="radio"
                                                 class="form-check-input"
-                                                id="several-input"
+                                                id="several-hours-input"
                                                 value="several"
+                                                name="duration"
                                             />
                                             several hours
                                         </label>
@@ -197,6 +193,7 @@
                                                 class="form-check-input"
                                                 id="all-day-input"
                                                 value="all-day"
+                                                name="duration"
                                             />
                                             all day
                                         </label>
@@ -205,6 +202,7 @@
                                 <button
                                     type="submit"
                                     class="btn btn-primary m-4"
+                                    id="submit-button"
                                 >
                                     Submit
                                 </button>
