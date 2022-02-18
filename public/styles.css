@@ -1,4 +1,17 @@
 .my-main {
-    background-image: url('bg.jpg');
+    background-image: url('teal.jpg');
     height: 100vh;
+    font-size: larger;
+}
+
+.form-control {
+    font-size: larger;
+}
+
+.form-check {
+    font-size: larger;
+}
+
+.btn {
+    font-size: larger;
 }
