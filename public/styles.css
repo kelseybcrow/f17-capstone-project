@@ -1,6 +1,6 @@
 .my-main {
     background-image: url('teal.jpg');
-    height: 100vh;
+    min-height: 100vh;
     font-size: larger;
 }
 
