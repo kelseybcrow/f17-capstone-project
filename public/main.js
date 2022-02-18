@@ -1,6 +1,5 @@
 const { port } = require('./index')
 
-
 const form = document.querySelector('form')
 const dateInput = document.querySelector('#date-input')
 const severityInput = document.querySelector('#severity-input')
@@ -34,29 +33,29 @@ function handleSubmit(event) {
         .catch((err) => console.log(err))
 }
 
-function getPainLogs() {
-    logList.innerHTML = '
-    '
-    axios.get(`${port}/pain-logs`)
-        .then((res) => {
-            res.data.forEach((log) => {
-                let logCard = `
-                    <div class="card bg-light mb-3">
-                        <div class="card-header">Pain log from ${dateInput}</div>
-                        <div class="card-body">
-                            <h4 class="card-title">Severity</h4>
-                            <p class="card-text">${severityInput}</p>
-                            <h4 class="card-title">Location</h4>
-                            <p class="card-text">${locationInput}</p>
-                            <h4 class="card-title">Duration</h4>
-                            <p class="card-text">${durationInput}</p>
-                        </div>
-                    </div>
-                    `
-                logList.innerHTML += logCard
-            })
-    })
-}
+// function getPainLogs() {
+//     logList.innerHTML = '
+//     '
+//     axios.get(`${port}/pain-logs`)
+//         .then((res) => {
+//             res.data.forEach((log) => {
+//                 let logCard = `
+//                     <div class="card bg-light mb-3">
+//                         <div class="card-header">Pain log from ${dateInput}</div>
+//                         <div class="card-body">
+//                             <h4 class="card-title">Severity</h4>
+//                             <p class="card-text">${severityInput}</p>
+//                             <h4 class="card-title">Location</h4>
+//                             <p class="card-text">${locationInput}</p>
+//                             <h4 class="card-title">Duration</h4>
+//                             <p class="card-text">${durationInput}</p>
+//                         </div>
+//                     </div>
+//                     `
+//                 logList.innerHTML += logCard
+//             })
+//     })
+// }
 
-getPainLogs()
+// getPainLogs()
 form.addEventListener('submit', handleSubmit)
