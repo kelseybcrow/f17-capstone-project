@@ -12,10 +12,24 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 })
 
 module.exports = {
-    createNewPainLog: (req, res) => {
+    getPainLogs: (req, res) => {
+        sequelize
+            .query(
+                `
+            SELECT * FROM pain_logs
+
+                `
+            )
+            .then((dbRes) => res.status(200).send(dbRes[0]))
+            .catch((err) => {
+                console.log(err)
+            })
+    },
+
+    createNewLog: (req, res) => {
+        const { date, severity, location, duration } = req.body
         console.log(req.body)
         console.log(req.params)
-        const { date, severity, location, duration } = req.body
 
         sequelize
             .query(
@@ -27,13 +41,4 @@ module.exports = {
             .then((dbRes) => res.status(200).send(dbRes[0]))
             .catch((err) => console.log(err))
     },
-
-    // getPainLogs: (req, res) => {
-    //     sequelize.query(
-    //         `
-    //         SELECT * FROM pain_logs
-
-    //             `
-    //     )
-    // },
 }
