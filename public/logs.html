@@ -38,10 +38,10 @@
                 <div class="collapse navbar-collapse" id="navbarColor03">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item px-4">
-                            <a class="nav-link" href="index.html">Home </a>
+                            <a class="nav-link" href="index.html">New Log </a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link" href="logs.html">Your Logs</a>
+                            <a class="nav-link" href="logs.html">Past Logs</a>
                         </li>
                     </ul>
                 </div>
@@ -54,7 +54,14 @@
                 >
                     <div class="col-sm-12 col-md-6 pt-5 mt-5">
                         <div class="p-4 border bg-light opacity-75">
-                            <h1>Your pain logs</h1>
+                            <h1>Your past logs</h1>
+                            <button
+                                type="get-logs"
+                                class="btn btn-primary m-4"
+                                id="get-logs-button"
+                            >
+                                Get logs
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -83,7 +90,7 @@
             integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
             crossorigin="anonymous"
         ></script>
-        <script src="../node_modules/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="main.js"></script>
     </body>
 </html>

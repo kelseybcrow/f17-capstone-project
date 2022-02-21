@@ -20,7 +20,8 @@ app.get('/', (req, res) => {
 // DEV
 app.post('/seed', seed)
 app.get('/pain-logs', (req, res) => {
-    res.status(200).send()
+    console.log(res.data)
+    res.status(200).send(res.data)
 })
 
 // CREATE NEW PAIN LOG

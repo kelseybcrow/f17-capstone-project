@@ -1,3 +1,19 @@
+const logsButton = document.querySelector('.get-logs-button')
+const logList = document.querySelector('.log-list')
+const form = document.querySelector('form')
+const submit = document.querySelector('#submit-button')
+// DATE INPUT
+const dateInput = document.querySelector('#date-input')
+// // SEVERITY INPUT
+// let severityInput = document.querySelector(
+//     'input[name="severity"]:checked'
+// ).value
+// // LOCATION INPUT
+const locationInput = document.querySelector('#location-input')
+// // DURATION INPUT
+// let durationInput = document.querySelector(
+//     'input[name="duration"]:checked'
+// ).value
 axios
     .get('http://localhost:4000')
     .then((res) => {
@@ -5,24 +21,18 @@ axios
     })
     .catch((err) => console.log(err))
 
-// const logList = document.querySelector('.log-list')
-// const form = document.querySelector('form')
-// const submit = document.querySelector('#submit-button')
-// // DATE INPUT
-// const dateInput = document.querySelector('#date-input')
-
-// // SEVERITY INPUT
-// let severityInput = document.querySelector(
-//     'input[name="severity"]:checked'
-// ).value
-
-// // LOCATION INPUT
-// const locationInput = document.querySelector('#location-input')
-
-// // DURATION INPUT
-// let durationInput = document.querySelector(
-//     'input[name="duration"]:checked'
-// ).value
+logsButton.addEventListener('click', getPainLogs)
+painLogs = (req, res) => {
+    axios
+        .get('http://localhost:4000/pain-logs')
+        .then((res) => {
+            console.log(res.data)
+            logList.innerHTML = res.data
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+}
 
 // function resetFormValues() {
 //     // resetting date

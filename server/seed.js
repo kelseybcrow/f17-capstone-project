@@ -31,7 +31,23 @@ module.exports = {
                         date, severity, location, duration
                     )
                     VALUES (
-                        'Feb 10, 2020', 'mild', 'head and neck', 'a couple hours'
+                        'Feb 10, 2022', 'mild', 'head and neck', 'a couple hours'
+                    );
+
+                    SELECT * FROM pain_logs;
+                    INSERT INTO pain_logs (
+                        date, severity, location, duration
+                    )
+                    VALUES (
+                        'Feb 11, 2022', 'moderate', 'head, neck, and shoulders', 'several hours'
+                    );
+
+                    SELECT * FROM pain_logs;
+                    INSERT INTO pain_logs (
+                        date, severity, location, duration
+                    )
+                    VALUES (
+                        'Feb 12, 2022', 'severe', 'head', 'less than an hour'
                     );
 
                     SELECT * FROM pain_logs;
