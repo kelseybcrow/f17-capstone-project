@@ -1,16 +1,9 @@
-const logsButton = document.querySelector('.get-logs-button')
+const logsButton = document.querySelector('#get-logs-button')
 const logList = document.querySelector('.log-list')
 
-axios
-    .get('http://localhost:4000')
-    .then((res) => {
-        console.log(res.data)
-    })
-    .catch((err) => console.log(err))
-
-getPainLogs = (req, res) => {
+getPastLogs = (req, res) => {
     axios
-        .get('http://localhost:4000/pain-logs')
+        .get('http://localhost:4000/past-logs')
         .then((res) => {
             console.log(res.data)
             // logList.innerHTML = res.data
@@ -20,4 +13,4 @@ getPainLogs = (req, res) => {
         })
 }
 
-logsButton.addEventListener('submit', getPainLogs)
+logsButton.addEventListener('click', getPastLogs)
