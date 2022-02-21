@@ -48,4 +48,20 @@ handleNewLog = (event) => {
     form.reset()
 }
 
+createLogCard = (pastLog) => {
+    const logCard = `
+        <div class="card bg-light mb-3" style="max-width: 20rem;">
+            <div class="card-header">
+            <h3>${date}</h3>
+            </div>
+        <div class="card-body">
+            <h4 class="card-title">${severity}</h4>
+            <h4 class="card-title">${location}</h4>
+            <h4 class="card-title">${duration}</h4>
+        </div>
+        `
+
+    return logCard
+}
+
 submitLogButton.addEventListener('click', handleNewLog)
