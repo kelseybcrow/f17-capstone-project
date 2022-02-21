@@ -3,14 +3,49 @@ const dateInput = document.querySelector('#date-input')
 const locationInput = document.querySelector('#location-input')
 const submitLogButton = document.querySelector('#submit-log-button')
 
-// submitLogButton.addEventListener('submit', createNewLog)
+// console.log(severityInput)
+// console.log(durationInput)
 
-let severityInput = document.querySelector(
-    'input[name="severity"]:checked'
-).value
-let durationInput = document.querySelector(
-    'input[name="duration"]:checked'
-).value
+handleNewLog = (event) => {
+    event.preventDefault()
 
-console.log(severityInput)
-console.log(durationInput)
+    let severityInput = document
+        .getElementsByName('severity')
+        .forEach((elem) => {
+            // if (elem.checked) {
+            //     return elem.value
+            // }
+            console.log(elem)
+        })
+    let durationInput = document
+        .getElementsByName('duration')
+        .forEach((elem) => {
+            // if (elem.checked) {
+            //     return elem.value
+            // }
+            console.log(elem)
+        })
+
+    const body = {
+        date: dateInput.value,
+        severity: severityInput,
+        location: locationInput.value,
+        duration: durationInput,
+    }
+
+    console.log(body)
+
+    axios
+        .post('http://localhost:4000/past-logs', body)
+        .then((res) => {
+            console.log(res.data)
+            alert('success')
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+
+    form.reset()
+}
+
+submitLogButton.addEventListener('click', handleNewLog)

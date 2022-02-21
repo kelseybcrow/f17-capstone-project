@@ -24,12 +24,12 @@ app.post('/seed', seed)
 app.get('/past-logs', getPastLogs)
 
 // CREATE NEW LOG
-// app.post('/pain-logs', createNewLog)
+app.post('/past-logs', createNewLog)
 
 // UPDATE PAIN LOG
-// app.put('/pain-logs:id', updateLog)
+// app.put('/past-logs:id', updateLog)
 
 // DELETE PAIN LOG
-// app.delete('/pain-logs:id', deleteLog)
+// app.delete('/past-logs:id', deleteLog)
 
 app.listen(SERVER_PORT, () => console.log(`server running on ${SERVER_PORT}`))

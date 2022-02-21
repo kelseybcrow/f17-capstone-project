@@ -29,7 +29,7 @@ module.exports = {
     createNewLog: (req, res) => {
         const { date, severity, location, duration } = req.body
         console.log(req.body)
-        console.log(req.params)
+        // console.log(req.params)
 
         sequelize
             .query(
