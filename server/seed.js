@@ -16,19 +16,30 @@ module.exports = {
 
         sequelize
             .query(
-                `DROP TABLE IF EXISTS pain_logs;
-                
+                `
+                DROP TABLE IF EXISTS pain_logs;
+
                 CREATE TABLE pain_logs (
-                    pain_log_id SERIAL PRIMARY KEY,
+                    id SERIAL PRIMARY KEY,
                     date VARCHAR(255),
                     severity VARCHAR(255),
                     location VARCHAR(255),
                     duration VARCHAR(255)
-                    )`
+                    );
+
+                    INSERT INTO pain_logs (
+                        date, severity, location, duration
+                    )
+                    VALUES (
+                        'Feb 10, 2020', 'mild', 'head and neck', 'a couple hours'
+                    );
+
+                    SELECT * FROM pain_logs;
+                    `
             )
             .then((dbRes) => {
                 console.log(dbRes)
-                res.sendStatus(200).send(dbRes)
+                res.status(200).send(dbRes)
             })
             .catch((err) => console.log('error seeding DB', err))
     },

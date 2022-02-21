@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 // DEV
 app.post('/seed', seed)
-app.get('/', (req, res) => {
+app.get('/pain-logs', (req, res) => {
     res.status(200).send()
 })
 
