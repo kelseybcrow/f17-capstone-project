@@ -1,22 +1,28 @@
-const { baseUrl } = 'http://localhost:4000/pain-logs'
+axios
+    .get('http://localhost:4000')
+    .then((res) => {
+        console.log(res.data)
+    })
+    .catch((err) => console.log(err))
 
-const form = document.querySelector('form')
-const submit = document.querySelector('#submit-button')
-// DATE INPUT
-const dateInput = document.querySelector('#date-input')
+// const logList = document.querySelector('.log-list')
+// const form = document.querySelector('form')
+// const submit = document.querySelector('#submit-button')
+// // DATE INPUT
+// const dateInput = document.querySelector('#date-input')
 
-// SEVERITY INPUT
-let severityInput = document.querySelector(
-    'input[name="severity"]:checked'
-).value
+// // SEVERITY INPUT
+// let severityInput = document.querySelector(
+//     'input[name="severity"]:checked'
+// ).value
 
-// LOCATION INPUT
-const locationInput = document.querySelector('#location-input')
+// // LOCATION INPUT
+// const locationInput = document.querySelector('#location-input')
 
-// DURATION INPUT
-let durationInput = document.querySelector(
-    'input[name="duration"]:checked'
-).value
+// // DURATION INPUT
+// let durationInput = document.querySelector(
+//     'input[name="duration"]:checked'
+// ).value
 
 // function resetFormValues() {
 //     // resetting date
@@ -25,37 +31,35 @@ let durationInput = document.querySelector(
 //     // resetting duration
 // }
 
-function handleSubmit(event) {
-    event.preventDefault()
+// function handleSubmit(event) {
+//     event.preventDefault()
 
-    // if (!dateInput || !severityInput || !locationInput || !durationInput) {
-    //     alert('Please fill out all fields')
-    //     return
-    // }
+//     if (!dateInput || !severityInput || !locationInput || !durationInput) {
+//         alert('Please fill out all fields')
+//         return
+//     }
 
-    let body = {
-        date: dateInput.value,
-        severity: severityInput,
-        location: locationInput.value,
-        duration: durationInput,
-    }
+//     let body = {
+//         date: dateInput.value,
+//         severity: severityInput,
+//         location: locationInput.value,
+//         duration: durationInput,
+//     }
 
-    axios
-        .post(`${baseUrl}`, body)
-        .then(() => {
-            // resetFormValues()
-            // getPainLogs()
-        })
-        .catch((err) => console.log(err))
-}
+//     axios
+//         .post(`${baseUrl}`, body)
+//         .then(() => {
+//             // resetFormValues()
+//             // getPainLogs()
+//         })
+//         .catch((err) => console.log(err))
+// }
 
 // function getPainLogs() {
-//     logList.innerHTML = '
-//     '
-//     axios.get(`${port}/pain-logs`)
-//         .then((res) => {
-//             res.data.forEach((log) => {
-//                 let logCard = `
+//     logList.innerHTML = ''
+//     axios.get(`${port}/pain-logs`).then((res) => {
+//         res.data.forEach((log) => {
+//             let logCard = `
 //                     <div class="card bg-light mb-3">
 //                         <div class="card-header">Pain log from ${dateInput}</div>
 //                         <div class="card-body">
@@ -68,10 +72,10 @@ function handleSubmit(event) {
 //                         </div>
 //                     </div>
 //                     `
-//                 logList.innerHTML += logCard
-//             })
+//             logList.innerHTML += logCard
+//         })
 //     })
 // }
 
 // getPainLogs()
-form.addEventListener('submit', handleSubmit)
+// form.addEventListener('submit', handleSubmit)
