@@ -1,4 +1,3 @@
-const pastLogsButton = document.querySelector('#get-logs-button')
 const logList = document.querySelector('#log-list')
 
 deleteLog = (id) => {
@@ -7,6 +6,7 @@ deleteLog = (id) => {
         .delete(`http://localhost:4000/past-logs/${id}`)
         .then(() => getPastLogs())
         .catch((err) => console.log(err))
+    location.reload()
 }
 
 let logCards = []
@@ -45,6 +45,13 @@ getPastLogs = () => {
                 let cardBody = document.createElement('div')
                 cardBody.classList.add('card-body')
 
+                let deleteButton = document.createElement('button')
+                deleteButton.innerText = 'x'
+                deleteButton.addEventListener('click', () => {
+                    deleteLog(log.id)
+                })
+                cardBody.appendChild(deleteButton)
+
                 let severity = document.createElement('h4')
                 severity.classList.add('card-title')
                 severity.innerText = `severity: ${log['severity']}`
@@ -66,10 +73,7 @@ getPastLogs = () => {
                 logList.appendChild(masterCard)
 
                 // let deleteButton = document.getElementById(`${log.id}`)
-                // let deleteButton = document.createElement('button')
-                // deleteButton.innerText = 'x'
-                // deleteButton.addEventListener('click', () => console.log('hit'))
-                // cardBody.appendChild(deleteButton)
+
                 // console.log(deleteButton)
             })
         })
@@ -78,4 +82,4 @@ getPastLogs = () => {
         })
 }
 
-pastLogsButton.addEventListener('click', getPastLogs)
+getPastLogs()
