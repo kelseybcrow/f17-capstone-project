@@ -20,6 +20,8 @@ getPastLogs = () => {
                 console.log(log)
 
                 let masterCard = document.createElement('div')
+                masterCard.classList.add('my-4')
+                masterCard.style.border = 'thin solid #D0D0D0'
                 let logCard = document.createElement('div')
                 logCard.classList.add('card', 'bg-light', 'mb-3')
                 masterCard.appendChild(logCard)
@@ -28,8 +30,8 @@ getPastLogs = () => {
                 cardHeader.classList.add('card-header')
                 logCard.appendChild(cardHeader)
 
-                let date = document.createElement('h3')
-                date.innerText = log.date
+                let date = document.createElement('h2')
+                date.innerText = log.date + ' pain log'
                 cardHeader.appendChild(date)
 
                 let deleteButton = document.createElement('button')
