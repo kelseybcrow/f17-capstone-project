@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 const { SERVER_PORT } = process.env
 const { seed } = require('./seed.js')
-const { createNewLog, getPastLogs } = require('./controller.js')
+const { createNewLog, getPastLogs, deleteLog } = require('./controller.js')
 
 const port = process.env.PORT || 4000
 const path = require('path')
@@ -26,10 +26,10 @@ app.get('/past-logs', getPastLogs)
 // CREATE NEW LOG
 app.post('/past-logs', createNewLog)
 
+// DELETE PAIN LOG
+app.delete('/past-logs/:id', deleteLog)
+
 // UPDATE PAIN LOG
 // app.put('/past-logs:id', updateLog)
-
-// DELETE PAIN LOG
-// app.delete('/past-logs:id', deleteLog)
 
 app.listen(SERVER_PORT, () => console.log(`server running on ${SERVER_PORT}`))

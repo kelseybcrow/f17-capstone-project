@@ -44,4 +44,21 @@ module.exports = {
             .then((dbRes) => res.status(200).send(dbRes[0]))
             .catch((err) => console.log(err))
     },
+
+    deleteLog: (req, res) => {
+        const { id } = req.params
+
+        sequelize
+            .query(
+                `
+                DELETE
+                FROM pain_logs
+                WHERE id = ${id}
+
+                RETURNING *;
+            `
+            )
+            .then((dbRes) => res.status(200).send(dbRes[0]))
+            .catch((err) => console.log(err))
+    },
 }
