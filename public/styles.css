@@ -12,6 +12,14 @@
     font-size: larger;
 }
 
-.btn {
+#create-log-button {
     font-size: larger;
+}
+
+#log-list {
+    max-width: 20rem;
+}
+
+.card {
+    background-color: aquamarine;
 }

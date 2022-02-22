@@ -18,39 +18,30 @@ getPastLogs = () => {
             logCards = res.data
             logCards.forEach((log) => {
                 console.log(log)
-                // let logCard = `
-                //         <div class="card bg-light mb-3" style="max-width: 20rem;">
-                //             <div class="card-header">
-                //             <h3>${log['date']} pain log</h3>
 
-                //             </div>
-                //         <div class="card-body">
-                //             <h4 class="card-title">severity: ${log['severity']}</h4>
-                //             <h4 class="card-title">location: ${log['location']}</h4>
-                //             <h4 class="card-title">duration: ${log['duration']}</h4>
-                //         </div>
-                //         `
                 let masterCard = document.createElement('div')
                 let logCard = document.createElement('div')
                 logCard.classList.add('card', 'bg-light', 'mb-3')
+                masterCard.appendChild(logCard)
 
                 let cardHeader = document.createElement('div')
                 cardHeader.classList.add('card-header')
                 logCard.appendChild(cardHeader)
+
                 let date = document.createElement('h3')
                 date.innerText = log.date
-                logCard.appendChild(date)
-                masterCard.appendChild(logCard)
-
-                let cardBody = document.createElement('div')
-                cardBody.classList.add('card-body')
+                cardHeader.appendChild(date)
 
                 let deleteButton = document.createElement('button')
-                deleteButton.innerText = 'x'
+                deleteButton.classList.add('btn', 'btn-primary')
+                deleteButton.innerText = 'delete this log'
                 deleteButton.addEventListener('click', () => {
                     deleteLog(log.id)
                 })
-                cardBody.appendChild(deleteButton)
+                cardHeader.appendChild(deleteButton)
+
+                let cardBody = document.createElement('div')
+                cardBody.classList.add('card-body')
 
                 let severity = document.createElement('h4')
                 severity.classList.add('card-title')
@@ -71,10 +62,6 @@ getPastLogs = () => {
 
                 masterCard.appendChild(cardBody)
                 logList.appendChild(masterCard)
-
-                // let deleteButton = document.getElementById(`${log.id}`)
-
-                // console.log(deleteButton)
             })
         })
         .catch((err) => {
