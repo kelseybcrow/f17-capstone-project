@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const { SERVER_PORT } = process.env
+// const { SERVER_PORT } = process.env
 const { seed } = require('./seed.js')
 const { createNewLog, getPastLogs, deleteLog } = require('./controller.js')
 
@@ -32,4 +32,4 @@ app.delete('/past-logs/:id', deleteLog)
 // UPDATE PAIN LOG
 // app.put('/past-logs:id', updateLog)
 
-app.listen(SERVER_PORT, () => console.log(`server running on ${SERVER_PORT}`))
+app.listen(port, () => console.log(`server running on ${port}`))
