@@ -23,11 +23,11 @@ getPastLogs = () => {
                 masterCard.classList.add('my-4')
                 masterCard.style.border = 'thin solid #D0D0D0'
                 let logCard = document.createElement('div')
-                logCard.classList.add('card', 'bg-light', 'mb-3')
+                logCard.classList.add('card', 'bg-light')
                 masterCard.appendChild(logCard)
 
                 let cardHeader = document.createElement('div')
-                cardHeader.classList.add('card-header')
+                cardHeader.classList.add('card-header', 'py-3')
                 logCard.appendChild(cardHeader)
 
                 let date = document.createElement('h2')
@@ -43,7 +43,7 @@ getPastLogs = () => {
                 cardHeader.appendChild(deleteButton)
 
                 let cardBody = document.createElement('div')
-                cardBody.classList.add('card-body')
+                cardBody.classList.add('card-body', 'py-2')
 
                 let severity = document.createElement('h4')
                 severity.classList.add('card-title')
