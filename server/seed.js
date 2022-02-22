@@ -31,7 +31,7 @@ module.exports = {
                         date, severity, location, duration
                     )
                     VALUES (
-                        'Feb 10, 2022', 'mild', 'head and neck', 'a couple hours'
+                        'Feb 10', 'mild', 'head and neck', 'a couple hours'
                     );
 
                     SELECT * FROM pain_logs;
@@ -39,7 +39,7 @@ module.exports = {
                         date, severity, location, duration
                     )
                     VALUES (
-                        'Feb 11, 2022', 'moderate', 'head, neck, and shoulders', 'several hours'
+                        'Feb 11', 'moderate', 'head, neck, and shoulders', 'several hours'
                     );
 
                     SELECT * FROM pain_logs;
@@ -47,7 +47,7 @@ module.exports = {
                         date, severity, location, duration
                     )
                     VALUES (
-                        'Feb 12, 2022', 'severe', 'head', 'less than an hour'
+                        'Feb 12', 'severe', 'head', 'less than an hour'
                     );
 
                     SELECT * FROM pain_logs;

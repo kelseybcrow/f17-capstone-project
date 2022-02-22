@@ -20,8 +20,9 @@ getPastLogs = () => {
                 console.log(log)
 
                 let masterCard = document.createElement('div')
-                masterCard.classList.add('my-4')
+                masterCard.classList.add('my-4', 'mx-auto')
                 masterCard.style.border = 'thin solid #D0D0D0'
+                masterCard.style.maxWidth = '30rem'
                 let logCard = document.createElement('div')
                 logCard.classList.add('card', 'bg-light')
                 masterCard.appendChild(logCard)
@@ -31,12 +32,12 @@ getPastLogs = () => {
                 logCard.appendChild(cardHeader)
 
                 let date = document.createElement('h2')
-                date.innerText = log.date + ' pain log'
+                date.innerText = log.date + '  pain log'
                 cardHeader.appendChild(date)
 
                 let deleteButton = document.createElement('button')
                 deleteButton.classList.add('btn', 'btn-primary')
-                deleteButton.innerText = 'delete this log'
+                deleteButton.innerText = 'Delete log'
                 deleteButton.addEventListener('click', () => {
                     deleteLog(log.id)
                 })
@@ -47,19 +48,19 @@ getPastLogs = () => {
 
                 let severity = document.createElement('h4')
                 severity.classList.add('card-title')
-                severity.innerText = `severity: ${log['severity']}`
+                severity.innerText = `Severity: ${log['severity']}`
                 cardBody.appendChild(severity)
                 cardBody.classList.add('card-body')
 
                 let location = document.createElement('h4')
                 location.classList.add('card-title')
-                location.innerText = `location: ${log['location']}`
+                location.innerText = `Location: ${log['location']}`
                 cardBody.appendChild(location)
                 cardBody.classList.add('card-body')
 
                 let duration = document.createElement('h4')
                 duration.classList.add('card-title')
-                duration.innerText = `duration: ${log['duration']}`
+                duration.innerText = `Duration: ${log['duration']}`
                 cardBody.appendChild(duration)
 
                 masterCard.appendChild(cardBody)
