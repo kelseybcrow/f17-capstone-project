@@ -5,7 +5,6 @@ const newLogButton = document.querySelector('#create-log-button')
 const pastLogsButton = document.querySelector('#get-logs-button')
 
 const dateInput = document.querySelector('#date-input')
-const severityInput = document.getElementsByName('severity')
 const locationInput = document.querySelector('#location-input')
 
 // console.log(severityInput)
@@ -14,27 +13,21 @@ const locationInput = document.querySelector('#location-input')
 handleNewLog = (event) => {
     event.preventDefault()
 
+    const severityInput = document.querySelector(
+        'input[name="severity"]:checked'
+    ).value
     console.log(severityInput)
-    severityInput.forEach((elem) => {
-        // if (elem.checked) {
-        //     return elem.value
-        // }
-        console.log(elem)
-    })
 
+    const durationInput = document.querySelector(
+        'input[name="duration"]:checked'
+    ).value
     console.log(durationInput)
-    durationInput.forEach((elem) => {
-        // if (elem.checked) {
-        //     return elem.value
-        // }
-        console.log(elem)
-    })
 
     const body = {
         date: dateInput.value,
-        severity: severityInput.value,
+        severity: severityInput,
         location: locationInput.value,
-        duration: durationInput.value,
+        duration: durationInput,
     }
 
     console.log(body)
@@ -77,6 +70,6 @@ getPastLogs = () => {
         })
 }
 
-pastLogsButton.addEventListener('click', getPastLogs)
+// pastLogsButton.addEventListener('click', getPastLogs)
 
-// newLogButton.addEventListener('click', handleNewLog)
+newLogButton.addEventListener('click', handleNewLog)
