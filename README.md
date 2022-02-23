@@ -1,4 +1,7 @@
-# f17-capstone-project
+![Create new log](https://user-images.githubusercontent.com/10691210/155398137-051f95d8-f123-42a2-8829-f9a7c19fde95.jpg)
+![Get all logs](https://user-images.githubusercontent.com/10691210/155398146-c305a06f-faa1-4032-9dd7-1f405ac6abe3.jpg)
+![responsive sizing](https://user-images.githubusercontent.com/10691210/155398148-5dd7f023-cb7a-4d2b-b1ca-f4a3f00ba5f5.jpg)
+# Foundations capstone project
 
 The technologies I used for this app are HTML, CSS, and JavaScript. I also used Bootstrap and implemented a free theme from the website Bootswatch. 
 
