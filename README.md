@@ -11,13 +11,9 @@ I put a lot of thought into the User Experience. Since people with chronic pain 
 
 This is why I used a minimalist Bootstrap theme and added a background image of the ocean, so the app would look and feel refreshing for users. 
 
-First feature – Create a new pain log.
+First feature – Create a new pain log. I used Axios to send requests to the server.
 
-I used Axios to send requests to the server.
-
-Second feature – Get all past pain logs.
-
-I used Express to create the server.
+Second feature – Get all past pain logs. I used Express to create the server.
 
 Third feature – Delete a pain log.
 
